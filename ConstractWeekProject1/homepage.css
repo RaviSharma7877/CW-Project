@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    z-index: 999;
+    position: sticky;
+    top: 0;
+}
+header #Nav{
+    width: 100%;
+    background-color: rgb(245,245,245);
+}
+header #Nav .container{
+    
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    padding: 0 16px;
+}
+header #Nav .container .fa-bars{
+    display: none;
+}
+header #Nav .container img{
+    height: 100%;
+}
+ #Nav .searchbar{
+    width:100%;
+    margin: auto 0 auto 0;
+    height: 45px;
+    max-width: 750px;
+    background: white;
+    display: flex;
+    border-radius: 5px;
+    
+}
+#Nav .searchbar input{
+    width: 100%;
+    max-width: 750px;
+    background: transparent;
+    flex: 1;
+    border:0;
+    outline: none;
+    font-size: 15px;
+    padding: 0px 20px;
+
+}
+#Nav .searchbar button{
+    border: none;
+    background: transparent;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+#Nav .searchbar button img{
+width: 40px;
+}
+.vl {
+    border-left: 1px solid black;
+    height: 60%;
+    margin: auto 8px auto 8px;
+  }
+  header #Nav .container a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 8px;
+  }
+
+
+  header #Nav2{
+    width: 100%;
+    background-color: rgb(254,254,254);
+    
+}
+header #Nav2 .container2{
+    align-items: center;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 0 16px;
+}
+header #Nav2 .container2 div:nth-child(2){
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    padding: 0 16px;
+    margin-right: 100px;
+}
+header #Nav2 .container2 div:nth-child(3){
+    
+    text-align: center;
+    margin-left: 100px;
+}
+header #Nav2 .container2 ul{
+    display: flex;
+}
+header #Nav2 .container2 ul li{
+    margin: 0 11px 0 11px;
+    list-style-type: none;
+}
+header #Nav2 .container2 ul li a{
+    text-decoration: none;
+    color: black;
+}
+#Nav2 .searchbar2{
+    width:100%;
+    margin: auto 0 auto 0;
+    height: 45px;
+    max-width: 750px;
+    background: white;
+    display: none;
+    border-radius: 5px;
+    
+}
+#Nav2 .searchbar2 input{
+    width: 100%;
+    max-width: 750px;
+    background: transparent;
+    flex: 1;
+    border:0;
+    outline: none;
+    font-size: 15px;
+    padding: 0px 20px;
+
+}
+#Nav2 .searchbar2 button{
+    border: none;
+    background: transparent;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+#Nav2 .searchbar2 button img{
+width: 40px;
+}
+
+body> .img1{
+    padding-top: 15px;
+    margin: auto;
+    width: 80%;
+}
+body .img1 a{
+    display: flex;
+    justify-content: center;
+}
+body .img1 a img{
+    width: 100%;
+    height: 25vh;
+}
+.img2{
+    width:100%;
+    margin-top: 15px;
+}
+.img2>div{
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+}
+.buittons{
+    width: 70%;
+    justify-content: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+.buittons button{
+    overflow: hidden;
+    border: transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.buittons button img{
+    width:100%;
+    height: 400px;
+    display: block;
+    z-index: 1;
+    transition: transform 2s;
+}
+.buittons button>div{
+    width: 100%;
+    overflow: hidden;
+}
+.buittons button:hover img{
+    transform: scale(1.1);
+}
+
+.bimg1{
+    display: flex;
+    justify-content: center;
+}
+.bimg1 div{
+    width: 67%;
+    display: flex;
+    justify-content: center;
+}
+.bimg1 div img{
+    width: 100%;
+}
+.bimg2{
+    display: flex;
+    justify-content: center;
+}
+.bimg2 div{
+    width: 67%;
+    display: flex;
+    justify-content: center;
+}
+.bimg2 div img{
+    width: 100%;
+}
+
+@media screen and (max-width:1250px) and (min-width:935px){
+    #Nav .searchbar{
+        width:100%;
+        margin: auto 0 auto 0;
+        height: 45px;
+        max-width: 450px;
+        background: white;
+        display: flex;
+        border-radius: 5px;
+        
+    }
+    header #Nav2 .container2 ul li{
+        margin: 0 6px 0 6px;
+        list-style-type: none;
+    }
+    header #Nav2 .container2 div:nth-child(2){
+        margin-right: 0px;
+    }
+    header #Nav2 .container2 div:nth-child(3){
+        display: flex;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .buittons{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:935px){
+    header #Nav .container .fa-bars{
+        display: flex;
+    }
+    header #Nav .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    #Nav .searchbar{
+       display: none;
+        
+    }
+    header #Nav2 .container2 div:nth-child(2){
+        display: none;
+    }
+    header #Nav2 .container2 div:nth-child(3){
+        display: none;
+    }
+    header #Nav2 .container2{
+        height: 50px;
+    }
+    #Nav2 .searchbar2{
+        border: 1px solid black;
+        width: 90%;
+        height: 40px;
+        display: flex;
+    }
+    .buittons{
+        width: 50%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}

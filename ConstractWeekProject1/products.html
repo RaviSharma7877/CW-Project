@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .card{
+            width: 50%;
+        }
+        .card img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    let body = document.querySelector("#container")
+
+    let API = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products"
+
+    let url = "https://fakestoreapi.com/products"
+
+
+    asyncFetch();
+
+    async function asyncFetch(){
+        try {
+            let request = await fetch(API)
+            let data = await request.json();
+            fetchdata = data.data.map(function(element){
+                return{
+                    name: element.brand,
+                    img: element.img,
+                    category: element.category,
+                    descriptions:element.details,
+                    price: element.price,
+                }
+            })
+            console.log(fetchdata)
+            Display(fetchdata)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    asyncFetch1()
+    async function asyncFetch1(){
+        try {
+            let request = await fetch(url)
+            let data1 = await request.json();
+            fetchdata1 = data1.map(function(element){
+                return{
+                    name: element.title,
+                    img: element.image,
+                    category: element.category,
+                    descriptions:element.description,
+                    price: element.price,
+                }
+            })
+            console.log(fetchdata1)
+            Display1(fetchdata1)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+    function Display1(data){
+        data.forEach((element)=>{
+            let card = document.createElement("div")
+            card.setAttribute("class","card")
+
+            let img = document.createElement("img")
+            img.setAttribute("src",element.img)
+
+            let name = document.createElement("h2")
+            name.innerText = element.name
+
+            let category = document.createElement("h5")
+            category.innerText  =element.category
+
+            let description  = document.createElement("p")
+            description.innerText = element.descriptions
+
+            let price  =document.createElement("p")
+            price.innerText = element.price
+
+            let btn = document.createElement("button")
+            btn.innerText = "Add to Cart"
+
+
+            card.append(img, name, category, description, price, btn)
+            body.append(card)
+        })
+    }
+
+    function Display(data){
+        data.forEach((element)=>{
+            let card = document.createElement("div")
+            card.setAttribute("class","card")
+
+            let img = document.createElement("img")
+            img.setAttribute("src",element.img)
+
+            let name = document.createElement("h2")
+            name.innerText = element.name
+
+            let category = document.createElement("h5")
+            category.innerText  =element.category
+
+            let description  = document.createElement("p")
+            description.innerText = element.descriptions
+
+            let price  =document.createElement("p")
+            price.innerText = element.price
+
+            let btn = document.createElement("button")
+            btn.innerText = "Add to Cart"
+
+
+            card.append(img, name, category, description, price, btn)
+            body.append(card)
+        })
+    }
+</script>
+</html>
