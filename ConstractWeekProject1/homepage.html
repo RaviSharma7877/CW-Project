@@ -32,8 +32,12 @@
         </a>
         <div class="vl"></div>
         <a href="">
-            <span>0</span>
-            <div>Bag</div>
+            <i class="fa-regular fa-user"></i>
+           <button>Login</button>
+        </a>
+        <a href="">
+            <i class="fa-solid fa-user"></i>
+            <button>SignUp</button>
         </a>
     </div>
 </div>
@@ -97,13 +101,21 @@
 </div>
 </header>
 <body>
+    <div class="slide">
+        <div class="slideimg">
+        <button id="pre"><</button>
+        <img src="" alt="">
+        
+        <button id="next">></button>
+    </div>
+    </div>
   <div class="img1">
     <a href=""><img src="img1.webp" alt=""></a>
     <a href=""><img src="img2.webp" alt=""></a>
   </div>
   <div class="img2">
     <div>
-        <a href=""><img src="img3.webp" alt=""></a>
+    <a href=""><img src="img3.webp" alt=""></a>
     <a href=""><img src="img4.webp" alt=""></a>
     <a href=""><img src="img5.webp" alt=""></a>
     <a href=""><img src="img6.webp" alt=""></a>
@@ -111,52 +123,88 @@
   </div>
   <div class="buittons">
     <button>
-        <div><img src="btn1.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn1.webp" alt=""></div>
         <h3>Men's Clothing</h3>
+        <p>clothes are articles of clothing designed for and worn by men</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn2.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn2.webp" alt=""></div>
         <h3>Women's Clothing</h3>
+        <p>ultimate representation of a woman s body confidence</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn3.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn3.webp" alt=""></div>
         <h3>Kids Clothing</h3>
+        <p> clothing for children who have not yet grown to full height</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn4.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn4.webp" alt=""></div>
         <h3>Shoes</h3>
+        <p>item of footwear intended to protect and comfort the human foot</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn5.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn5.webp" alt=""></div>
         <h3>Handbags</h3>
+        <p>woman's handbag is an integral part of her outfit</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn6.webp" alt=""></div>
-        <h3>Jewelry</h3>
+        <a href="">
+            <div><img src="btn6.webp" alt=""></div>
+        <h3>Jewellery</h3>
+        <p>consists of decorative items worn for personal adornment,</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn7.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn7.webp" alt=""></div>
         <h3>Beauty</h3>
+        <p>the qualities of a person or a thing that give pleasure to the senses</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn8.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn8.webp" alt=""></div>
         <h3>Home</h3>
+        <p>goods and products used within households</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn9.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn9.webp" alt=""></div>
         <h3>Bed&Bath</h3>
+        <p>a good time to inspect a patient's skin for redness and sores.</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn10.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn10.webp" alt=""></div>
         <h3>Conn'sxAD</h3>
+        <p>equipment, or appliances work by means of electricity</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn11.webp" alt=""></div>
+        <a href="">
+            <div><img src="btn11.webp" alt=""></div>
         <h3>Gifts</h3>
+        <p>a store primarily selling souvenirs, memorabilia, and other items relating to a particular topic or theme</p>
+        </a>
     </button>
     <button>
-        <div><img src="btn12.webp" alt=""></div>
+        <a href="products.html">
+            <div><img src="btn12.webp" alt=""></div>
         <h3>All Products</h3>
+        <p>Turn features into benefits</p>
+        </a>
     </button>
   </div>
   <br>
@@ -184,4 +232,34 @@
 <footer>
 
 </footer>
+<script>
+let next = document.getElementById("next")
+let pre = document.getElementById("pre")
+let imgtag = document.querySelector(".slideimg>img")
+let currentindex = 0
+
+
+
+let imgarr = ["https://belk.scene7.com/is/image/Belk/wk50_2023_trendedit_fh?$DWP_PHOTO$","https://belk.scene7.com/is/image/Belk/wk51_011623_hp_fh3?&$DWP_GRAPHIC$","https://belk.scene7.com/is/image/Belk/wk50_2023_online_exclusive_hp_fh_1?$DWP_PHOTO$","https://belk.scene7.com/is/image/Belk/wk36_2022_spec_clearance_bopis_ch_fh1?$DWP_PHOTO$"]
+
+pre.addEventListener("click",()=>{
+    currentindex--
+    if(currentindex<0){
+        currentindex = imgarr.length-1
+    }
+    display()
+})
+next.addEventListener("click",()=>{
+    currentindex++
+    if(currentindex===imgarr.length){
+        currentindex = 0
+    }
+    display()
+})
+function display(){
+imgtag.setAttribute("src",imgarr[currentindex])
+}
+display()
+
+</script>
 </html>

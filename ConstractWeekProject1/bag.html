@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="product.css">
-    <script src="https://kit.fontawesome.com/9ae6cbbb42.js" crossorigin="anonymous"></script>
+    <title>Bag</title>
+    <link rel="stylesheet" href="bag.css">
 </head>
 <header>
     <div id="Nav">
@@ -100,6 +99,63 @@
     <div id="container">
         <div class="cards"></div>
     </div>
+    
 </body>
-<script src="product.js"></script>
+<script>
+    let countcart = document.querySelector("span")
+    let body = document.querySelector(".cards")
+
+
+    let cartarr = JSON.parse(localStorage.getItem("cart"))
+if(cartarr===null){
+    cartarr = []
+}
+countcart.innerText = cartarr.length
+console.log(cartarr)
+Display(cartarr)
+function Display(data){
+    body.innerHTML = ""
+    data.forEach((element,index)=>{
+        let card = document.createElement("div")
+        card.setAttribute("class","card")
+
+        let img = document.createElement("img")
+        img.setAttribute("src",element.img)
+
+        let name = document.createElement("h2")
+        name.innerText = element.name
+
+        let category = document.createElement("h5")
+        category.innerText  =element.category
+
+        let description  = document.createElement("p")
+        description.innerText = element.descriptions
+
+        let price  =document.createElement("p")
+        price.innerText = element.price
+
+        let btn = document.createElement("button")
+        btn.innerText = "Remove"
+        btn.style.backgroundColor = "red"
+        btn.style.border = "none"
+        btn.style.color = "white"
+        btn.addEventListener("click",()=>{
+            cartarr = cartarr.filter((el,i)=>{
+                if(index===i){
+                    return false
+                }else{
+                    return true
+                }
+            })
+            localStorage.setItem("cart",JSON.stringify(cartarr))
+            Display(cartarr)
+                countcart.innerText = cartarr.length
+        })
+
+
+        card.append(img, name, category, description, price, btn)
+        body.append(card)
+    })
+}
+</script>
 </html>
