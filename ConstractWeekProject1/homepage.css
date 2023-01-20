@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 header{
     z-index: 999;
@@ -20,8 +23,13 @@ header #Nav .container{
     justify-content: center;
     padding: 0 16px;
 }
+
+header #Nav .container .items{
+    display: none;
+}
 header #Nav .container .fa-bars{
     display: none;
+    font-size: 1.6rem;
 }
 header #Nav .container img{
     height: 100%;
@@ -67,24 +75,43 @@ width: 40px;
     text-align: center;
     padding: 0 8px;
   }
+  header #Nav .container a:hover{
+    color: #4070f4;
+    text-decoration: underline;
+  }
   .slide{
     display: flex;
     justify-content: center;
+    
   }
  .slideimg{
-    width: 70%;
+    margin-top: 15px;
+    width: 80%;
     height:35vh;
     display: flex;
     align-items: center;
+    position: relative;
  }
- .slideimg button{
-    height: 50px;
+ .slideimg button:nth-child(1){
+    position: absolute;
+    height: 70px;
     width: 28px;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px solid gray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+ }
+ .slideimg button:nth-child(3){
+    position: absolute;
+    right: 0;
+    height: 70px;
+    width: 28px;
+    border: 1px solid gray;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
  }
  .slideimg img{
-    width: 95%;
+    width: 100%;
     height: 100%;
  }
 
@@ -125,6 +152,10 @@ header #Nav2 .container2 ul li a{
     text-decoration: none;
     color: black;
 }
+header #Nav2 .container2 ul li a:hover{
+    color: #4070f4;
+    text-decoration: underline;
+}
 #Nav2 .searchbar2{
     width:100%;
     margin: auto 0 auto 0;
@@ -157,6 +188,7 @@ width: 40px;
 }
 
 body> .img1{
+    position: relative;
     margin: auto;
     width: 80%;
     margin-top: 15px;
@@ -240,8 +272,72 @@ body .img1 a img{
 .bimg2 div img{
     width: 100%;
 }
+.foot{
+    margin-top: 15px;
+    display: flex;
+    justify-content:center;
+}
+.foot .footdata{
+width: 67%;
+}
+.foot .footdata h3{
+    padding: 5px 0 10px 0;
+}
+.foot .footdata p{
+    padding: 10px 0 5px 0;
+}
+.foot .footdata .tranding button{
+width: 150px;
+height: 35px;
+border: 1px solid gray;
+border-radius: none;
+background:transparent;
+margin: 15px 5px 10px 5px;
+}
+.foot .footdata .tranding button:hover{
+    background:rgb(245,245,245);
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer .footers{
+    width: 67%;
+    height: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .footers div{
+    display: inline-block;
+}
+footer .footers div a{
+    color: black;
+    padding: 0px 0 20px 0;
+    text-decoration: none;
+}
+footer .footers div a:hover{
+    color: #4070f4;
+    text-decoration: underline;
+}
+.vl2 {
+    border-left: 1px solid black;
+    height: 100%;
+    margin: auto 8px auto 8px;
+  }
+.connect{
+    margin: 15px 0 15px 0;
+    display:flex;
+    justify-content: center;
+    
+}
+.connect .uil{
+    font-size: 1.6rem;
+    color: black;
+}
 
-@media screen and (max-width:1250px) and (min-width:935px){
+
+@media screen and (max-width:1425px) and (min-width:1120px){
     #Nav .searchbar{
         width:100%;
         margin: auto 0 auto 0;
@@ -267,12 +363,23 @@ body .img1 a img{
     .buittons{
         grid-template-columns: repeat(2,1fr);
     }
-   
-}
-@media screen and (max-width:935px){
-    header #Nav .container .fa-bars{
+    footer .footers{
         display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
+    footer .footers div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer .footers div>img{
+        width: 50%;
+    }
+}
+@media screen and (max-width:1120px) and (min-width:675px){
     header #Nav .container{
         display: flex;
         justify-content: space-between;
@@ -300,5 +407,96 @@ body .img1 a img{
         width: 50%;
         grid-template-columns: repeat(1,1fr);
     }
-    
+    footer .footers{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    footer .footers div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer .footers div>img{
+        width: 50%;
+    }
+}
+@media screen and (max-width:675px){
+    header #Nav .container .fa-bars{
+        display: flex;
+    }
+    header #Nav .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    header #Nav .container .login{
+    display: none;
+    }
+    #Nav .searchbar{
+       display: none;
+        
+    }
+    header #Nav2 .container2 div:nth-child(2){
+        display: none;
+    }
+    header #Nav2 .container2 div:nth-child(3){
+        display: none;
+    }
+    header #Nav2 .container2{
+        height: 50px;
+    }
+    #Nav2 .searchbar2{
+        border: 1px solid black;
+        width: 90%;
+        height: 40px;
+        display: flex;
+    }
+    .buittons{
+        width: 50%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    footer .footers{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    footer .footers div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer .footers div>img{
+        width: 50%;
+    }
+    header #Nav .container .items{
+        display: grid;
+        position: absolute;
+        background-color: rgb(245,245,245);
+        width: 50%;
+        top: 55px;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: 1;
+        transition: 0.6s;
+    }
+    header #Nav .container .items .signup{
+        display: flex;
+        justify-content: center;
+    }
+    header #Nav .container .items ul li{
+        list-style-type: none;
+        padding: 10px 0 5px 35px;
+    }
+    header #Nav .container .items ul .uil{
+        font-size: 1.6rem;
+        position: absolute;
+        right: 0;
+    }
+    header #Nav .container .navbartoggle{
+
+    }
 }
