@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">SignUp here</span>
+
+                
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" name="" id="name" placeholder="Enter your name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="text" name="" id="email" placeholder="Enter your email" required>
+                    <i class="uil uil-envelope"></i>
+                    </div>
+                    
+                    <div class="input-field">
+                        <input type="password" name="" id="" 
+                        class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        
+                    </div>
+
+                    <div class="input-field">
+                        <input type="password" class="conpassword" name="" id="" placeholder="Confirm your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash shoehidepw"></i>
+                    </div>
+
+                    <p id="message"></p>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logcheck">
+                            <label for="logcheck" class="text">Remamber me</label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" name="" id="" value="Signup Now" onclick="test()">
+                    </div>
+                </form>
+                <div class="login-signup">
+                    <span class="text">Already a member?
+                        <a href="./login.html" class="text signup-text">Login now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="signup.js"></script>
+</html>

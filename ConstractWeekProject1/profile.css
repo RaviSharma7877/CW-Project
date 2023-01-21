@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+    background-color: #999;
+}
+.profile-box{
+    background-color: #4070f4;
+    text-align: center;
+    padding: 40px 90px;
+    color: #fff;
+    position: relative;
+    border-radius: 20px;
+}
+.menu{
+    top: 30px;
+    position: absolute;
+    left: 20px;
+}
+.setting{
+    top: 30px;
+    position: absolute;
+    right: 20px;
+}
+.profile{
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 60%;
+    padding: 6px;
+}
+.profile-box button{
+    background-color: #fff;
+    color: #4070f4;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 10px #4070f4;
+    padding: 15px 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: -50px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.profile-box h3{
+font-size: 22px;
+margin-top: 20px;
+font-weight: 500;
+}
+
+.profile-bottom{
+    background-color: #fff;
+    color: #999;
+    padding: 60px 0;
+    margin: -10px -90px -40px -90px;
+    border-radius: 20px;
+}
+
+.profile-bottom .uil{
+    margin-top: 15px;
+    cursor: pointer;
+    color: #4070f4;
+}
+.socialmedia{
+    margin: 25px 5px;
+    cursor: pointer;
+}

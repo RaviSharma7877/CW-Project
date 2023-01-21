@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Electronic Products</title>
     <link rel="stylesheet" href="product.css">
     <script src="https://kit.fontawesome.com/9ae6cbbb42.js" crossorigin="anonymous"></script>
 </head>
@@ -98,8 +98,19 @@
     </header>
 <body>
     <div id="container">
+        <div id="filter">
+            <input type="number" id="lower" />
+            <input type="number" id="upper" />
+            <button id="filter-btn">Filter</button>
+          </div>
+          <select id="sort">
+            <option value="">Sort By...</option>
+            <option value="name">Name</option>
+            <option value="cat">Category</option>
+            <option value="price">Price</option>
+          </select>
         <div class="cards"></div>
     </div>
 </body>
-<script src="product.js"></script>
+<script src="eloproduct.js"></script>
 </html>

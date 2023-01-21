@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    z-index: 999;
+    position: sticky;
+    top: 0;
+}
+header #Nav{
+    width: 100%;
+    background-color: rgb(245,245,245);
+}
+header #Nav .container{
+    
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    padding: 0 16px;
+}
+header #Nav .container .fa-bars{
+    display: none;
+}
+header #Nav .container img{
+    height: 100%;
+}
+ #Nav .searchbar{
+    width:100%;
+    margin: auto 0 auto 0;
+    height: 45px;
+    max-width: 750px;
+    background: white;
+    display: flex;
+    border-radius: 5px;
+    
+}
+#Nav .searchbar input{
+    width: 100%;
+    max-width: 750px;
+    background: transparent;
+    flex: 1;
+    border:0;
+    outline: none;
+    font-size: 15px;
+    padding: 0px 20px;
+
+}
+#Nav .searchbar button{
+    border: none;
+    background: transparent;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+#Nav .searchbar button img{
+width: 40px;
+}
+.vl {
+    border-left: 1px solid black;
+    height: 60%;
+    margin: auto 8px auto 8px;
+  }
+  header #Nav .container a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 8px;
+  }
+ 
+
+
+  header #Nav2{
+    width: 100%;
+    background-color: rgb(254,254,254);
+    
+}
+header #Nav2 .container2{
+    align-items: center;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 0 16px;
+}
+header #Nav2 .container2 div:nth-child(2){
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    padding: 0 16px;
+    margin-right: 100px;
+}
+header #Nav2 .container2 div:nth-child(3){
+    
+    text-align: center;
+    margin-left: 100px;
+}
+header #Nav2 .container2 ul{
+    display: flex;
+}
+header #Nav2 .container2 ul li{
+    margin: 0 11px 0 11px;
+    list-style-type: none;
+}
+header #Nav2 .container2 ul li a{
+    text-decoration: none;
+    color: black;
+}
+#Nav2 .searchbar2{
+    width:100%;
+    margin: auto 0 auto 0;
+    height: 45px;
+    max-width: 750px;
+    background: white;
+    display: none;
+    border-radius: 5px;
+    
+}
+#Nav2 .searchbar2 input{
+    width: 100%;
+    max-width: 750px;
+    background: transparent;
+    flex: 1;
+    border:0;
+    outline: none;
+    font-size: 15px;
+    padding: 0px 20px;
+
+}
+#Nav2 .searchbar2 button{
+    border: none;
+    background: transparent;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+#Nav2 .searchbar2 button img{
+width: 40px;
+}
+
+#container .cards{
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.card{
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    border: transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.card img{
+    width: 100%;
+    height: 270px;
+}
+
+
+
+@media screen and (max-width:1250px) and (min-width:935px){
+    #Nav .searchbar{
+        width:100%;
+        margin: auto 0 auto 0;
+        height: 45px;
+        max-width: 450px;
+        background: white;
+        display: flex;
+        border-radius: 5px;
+        
+    }
+    header #Nav2 .container2 ul li{
+        margin: 0 6px 0 6px;
+        list-style-type: none;
+    }
+    header #Nav2 .container2 div:nth-child(2){
+        margin-right: 0px;
+    }
+    header #Nav2 .container2 div:nth-child(3){
+        display: flex;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .buittons{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #container .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:935px){
+    header #Nav .container .fa-bars{
+        display: flex;
+    }
+    header #Nav .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    #Nav .searchbar{
+       display: none;
+        
+    }
+    header #Nav2 .container2 div:nth-child(2){
+        display: none;
+    }
+    header #Nav2 .container2 div:nth-child(3){
+        display: none;
+    }
+    header #Nav2 .container2{
+        height: 50px;
+    }
+    #Nav2 .searchbar2{
+        border: 1px solid black;
+        width: 90%;
+        height: 40px;
+        display: flex;
+    }
+    .buittons{
+        width: 50%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    #container .cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
