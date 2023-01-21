@@ -64,6 +64,18 @@ header #Nav .container img{
 #Nav .searchbar button img{
 width: 40px;
 }
+
+#Nav .reward1{
+    display: block;
+    margin-top: 20px;
+    border: 1px solid red;
+}
+#Nav .reward:hover .reward1> li{
+    display:inline-block;
+    z-index: 999;
+}
+
+
 .vl {
     border-left: 1px solid black;
     height: 60%;
@@ -448,7 +460,6 @@ footer .footers div a:hover{
         height: 50px;
     }
     #Nav2 .searchbar2{
-        border: 1px solid black;
         width: 90%;
         height: 40px;
         display: flex;

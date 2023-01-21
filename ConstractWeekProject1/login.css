@@ -57,6 +57,13 @@ border-radius: 25px;
     border-top: 2px solid transparent;
     transition: all 0.2se ease;
 }
+.form p{
+    font-size: 14px;
+    margin: 15px 0;
+    display: inline-block;
+    color: #000000;
+    padding: 5px 20px;
+}
 
 .input-field input:is(:focus, :valid){
     border-bottom-color: #4070f4;
