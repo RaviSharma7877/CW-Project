@@ -5,6 +5,7 @@ let email = document.getElementById("email")
 let btn = document.getElementById("btn")
 let form = document.querySelector("form")
 let message  =document.querySelector("#message")
+let logcheck = document.getElementById("logcheck")
 
 pwshowhide.addEventListener("click",()=>{
     if(pwfield.type === "password"){
@@ -27,10 +28,15 @@ btn.addEventListener("click",()=>{
         }
     }
     if(ans == true){
-        message.innerText = "Password match"
+        if(logcheck.checked){
+            message.innerText = "Password match"
         message.style.color = "green"
         window.location.assign("homepage.html")
         alert("Login successfull")
+        }else{
+            pwfield.value=""
+            alert("Checkbox is Empty")
+        }
         
     }else{
         message.innerText = "Password error"
