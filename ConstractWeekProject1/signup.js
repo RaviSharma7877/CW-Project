@@ -52,7 +52,7 @@ function test(){
         if(logcheck.checked){
             dataarr.push(obj)
         localStorage.setItem("data",JSON.stringify(dataarr))
-        window.location.assign("login.html")
+        window.location.assign("index.html")
         alert("Signup Successful pls Login")
         }else{
             alert("Checkbox is Empty")
