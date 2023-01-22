@@ -67,7 +67,68 @@ width: 40px;
     text-align: center;
     padding: 0 8px;
   }
- 
+  #Nav .reward ul li{
+    list-style-type: none;
+}
+#Nav .reward .menu_bar ul li{
+    width: 6%;
+    display: none;
+    position: absolute;
+    margin-top: -3px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 999;
+    list-style-type: none;
+    color: black;
+    border-radius: 5px;
+}
+#Nav .reward:hover .menu_bar ul li{
+    display: block;
+}
+#Nav .reward .menu_bar1 ul li{
+    width: 6%;
+    display: none;
+    position: absolute;
+    margin-top: -3px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 999;
+    list-style-type: none;
+    color: black;
+    border-radius: 5px;
+}
+#Nav .reward:hover .menu_bar1 ul li{
+    display: block;
+}
+
+#Nav .reward2{
+    margin-top: 50px;
+    margin-left:5px;
+    text-align: center;
+}
+#Nav .reward2 ul li{
+    list-style-type: none;
+}
+#Nav .reward2 .menu_bar2 a ul li{
+    width: 5%;
+    display: none;
+    position: absolute;
+    margin-top: -20px;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    z-index: 999;
+    
+    color: black;
+    border-radius: 5px;
+}
+#Nav .reward2:hover .menu_bar2 a ul li{
+    display: block;
+    color: black;
+}
+
 
 
   header #Nav2{

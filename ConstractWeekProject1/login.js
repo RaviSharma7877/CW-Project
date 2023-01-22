@@ -20,16 +20,27 @@ if(dataarr===null){
 }
 
 btn.addEventListener("click",()=>{
-    Display(dataarr)
-})
-    function Display(data){
-    data.forEach((element)=>{
-        if(email.value===element.email && pwfield.value===element.password){
-            
-            console.log(email.value,pwfield.value)
+    let ans = false
+    for(let i=0;i<dataarr.length;i++){
+        if(email.value===dataarr[i].email && pwfield.value===dataarr[i].password){
+            ans = true
         }
-    })
     }
+    if(ans == true){
+        message.innerText = "Password match"
+        message.style.color = "green"
+        window.location.assign("homepage.html")
+        alert("Login successfull")
+        
+    }else{
+        message.innerText = "Password error"
+        message.style.color = "red"
+        pwfield.value=""
+        alert("Check password")
+    }
+})
+    
+    
 
         
    

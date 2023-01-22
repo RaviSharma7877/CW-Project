@@ -87,6 +87,8 @@ sort.addEventListener("change",()=>{
         Display1(sortname)
     }else if(sort.value==="cat"){
         Display1(sortcat)
+    }else if(sort.value==="price"){
+        Display1(sortprice)
     }
     })
 

@@ -4,6 +4,7 @@ let imgtag = document.querySelector(".slideimg>img")
 let openMenu = document.querySelector(".fa-bars")
 let closeMenu = document.querySelector(".uil-times")
 let mainMenu = document.querySelector(".items")
+let searchform = document.getElementById("searchform")
 let currentindex = 0
 
 openMenu.addEventListener('click',show)

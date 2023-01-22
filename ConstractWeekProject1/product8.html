@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronic Products</title>
-    <link rel="stylesheet" href="product8.css">
+    <link rel="stylesheet" href="product1.css">
     <script src="https://kit.fontawesome.com/9ae6cbbb42.js" crossorigin="anonymous"></script>
 </head>
 <header>
@@ -14,22 +14,55 @@
             <i class="fa-solid fa-bars"></i>
             <img src="logo.png" alt="">
             <form action="" class="searchbar">
-                <input type="text" placeholder="What can we heip you find?" name="q" id="">
-                <button type="submit"><img src="icons8-search-50.png" alt=""></button>
+                <input type="text" placeholder="Search by name..." name="q" id="search">
+                <button type="submit" value="search"><img src="icons8-search-50.png" alt=""></button>
             </form>
             <div class="vl"></div>
-            <a href="">
-                <i class="fa-solid fa-plus"></i>
+            <a href="" class="reward">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-plus"></i>
                 <div>AD Rewards+</div>
+                <div class="menu_bar">
+                    <ul>
+                        <li>No Rewards yet!!! please visit again</li>
+                        
+                    </ul>
+                </div>
+                    </li>
+                </ul>
             </a>
-            <a href="">
-                <i class="fa-solid fa-dollar-sign"></i>
+            <a href="./bag.html" class="reward">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-dollar-sign"></i>
                 <div>Coupons</div>
+                <div class="menu_bar1">
+                    <ul>
+                        <li>AD-10(applicable ony more then amout of 1000)-click here to get</li>
+                    </ul>
+                </div>
+                    </li>
+                </ul>
             </a>
-            <a href="">
-                <i class="fa-solid fa-user"></i>
+            
+            <div class="reward2">
+            <ul>
+                    <li>
+                        <i class="fa-solid fa-user"></i>
                 <div>My Account</div>
-            </a>
+                <div class="menu_bar2">
+                    <a href="profile.html">
+                        <ul>
+                            <li>Profile</li>
+                            
+                        </ul>
+                        
+                    </a>
+                </div>
+                    </li>
+                </ul>
+            </div>
             <div class="vl"></div>
             <a href="./bag.html">
                 <span>0</span>
@@ -40,49 +73,49 @@
     <div id="Nav2">
         <div class="container2">
             <form action="" class="searchbar2">
-                <input type="text" placeholder="What can we heip you find?" name="q" id="">
-                <button type="submit"><img src="icons8-search-50.png" alt=""></button>
+                <input type="text" placeholder="What can we heip you find?" name="q" id="search">
+                <button type="submit" value="search"><img src="icons8-search-50.png" alt=""></button>
             </form>
             <div class="items">
                 <ul>
                     <li>
-                        <a href="">Gift</a>
+                        <a href="./product1.html">Gift</a>
                     </li>
                     <li>
-                        <a href="">Women</a>
+                        <a href="./product2.html">Women</a>
                     </li>
                     <li>
-                        <a href="">Men</a>
+                        <a href="./product3.html">Men</a>
                     </li>
                     <li>
-                        <a href="">Kids</a>
+                        <a href="./product4.html">Kids</a>
                     </li>
                     <li>
-                        <a href="">Shoes</a>
+                        <a href="./product5.html">Shoes</a>
                     </li>
                     <li>
-                        <a href="">Handbags</a>
+                        <a href="./product6.html">Handbags</a>
                     </li>
                     <li>
-                        <a href="">Jewelry</a>
+                        <a href="./product7.html">Jewelry</a>
                     </li>
                     <li>
-                        <a href="">Beauty</a>
+                        <a href="./product8.html">Beauty</a>
                     </li>
                     <li>
-                        <a href="">Home</a>
+                        <a href="./products.html">Home</a>
                     </li>
                     <li>
-                        <a href="">Bed&Bath</a>
+                        <a href="./product9.html">Bed&Bath</a>
                     </li>
                     <li>
-                        <a href="">Conn'sxAD</a>
+                        <a href="./eloproduct.html">Conn'sxAD</a>
                     </li>
                     <li>
-                        <a href="">Brands</a>
+                        <a href="./product10.html">Brands</a>
                     </li>
                     <li>
-                        <a href="">Clearance</a>
+                        <a href="./product10.html">Clearance</a>
                     </li>
                 </ul>
             </div>
@@ -99,12 +132,12 @@
 <body>
     <div id="container">
         <div id="filter">
-            <input type="number" id="lower" />
-            <input type="number" id="upper" />
+            <input type="number" id="lower" placeholder="lower price"/>
+            <input type="number" id="upper" placeholder="upper price"/>
             <button id="filter-btn">Filter</button>
           </div>
         <div class="cards"></div>
     </div>
 </body>
-<script src="product8.js"></script>
+<script src="product1.js"></script>
 </html>

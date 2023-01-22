@@ -28,6 +28,7 @@ async function asyncFetch(){
             }
         })
         Display(fetchdata)
+        
     } catch (error) {
         console.log(error)
     }
