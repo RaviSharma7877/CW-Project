@@ -5,6 +5,7 @@ let email = document.getElementById("email")
 let btn = document.getElementById("btn")
 let form = document.querySelector("form")
 let message  =document.querySelector("#message")
+let logcheck = document.getElementById("logcheck")
 
 pwshowhide.addEventListener("click",()=>{
     if(pwfield.type === "password"){
@@ -20,16 +21,32 @@ if(dataarr===null){
 }
 
 btn.addEventListener("click",()=>{
-    Display(dataarr)
-})
-    function Display(data){
-    data.forEach((element)=>{
-        if(email.value===element.email && pwfield.value===element.password){
-            
-            console.log(email.value,pwfield.value)
+    let ans = false
+    for(let i=0;i<dataarr.length;i++){
+        if(email.value===dataarr[i].email && pwfield.value===dataarr[i].password){
+            ans = true
         }
-    })
     }
+    if(ans == true){
+        if(logcheck.checked){
+            message.innerText = "Password match"
+        message.style.color = "green"
+        window.location.assign("homepage.html")
+        alert("Login successfull")
+        }else{
+            pwfield.value=""
+            alert("Checkbox is Empty")
+        }
+        
+    }else{
+        message.innerText = "Password error"
+        message.style.color = "red"
+        pwfield.value=""
+        alert("Check password")
+    }
+})
+    
+    
 
         
    

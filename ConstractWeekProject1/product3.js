@@ -3,6 +3,7 @@ let countcart = document.querySelector("span")
 let filterbtn = document.getElementById("filter-btn")
 let lower =document.getElementById("lower");
 let upper =document.getElementById("upper");
+let searchform = document.querySelector("form")
 
 // let API = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products"
 
@@ -47,6 +48,23 @@ async function asyncFetch1(){
             })
             Display1(filtered)
           })
+
+
+          searchform.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            let searchpara = searchform.search.value
+console.log(searchpara)
+            let filtered1 = fetchdata1.filter((element)=>{
+                if(element.name.toUpperCase().includes(searchpara.toUpperCase())===true){
+                    return true
+                }else{
+                    return false
+                }
+            })
+            Display1(filtered1)
+          })
+
+
 
     } catch (error) {
         console.log(error)

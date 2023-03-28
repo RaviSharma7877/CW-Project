@@ -17,18 +17,51 @@
                 <button type="submit"><img src="icons8-search-50.png" alt=""></button>
             </form>
             <div class="vl"></div>
-            <a href="">
-                <i class="fa-solid fa-plus"></i>
+            <a href="" class="reward">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-plus"></i>
                 <div>AD Rewards+</div>
+                <div class="menu_bar">
+                    <ul>
+                        <li>No Rewards yet!!! please visit again</li>
+                    </ul>
+                </div>
+                    </li>
+                </ul>
             </a>
-            <a href="">
-                <i class="fa-solid fa-dollar-sign"></i>
+            <a href="./bag.html" class="reward">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-dollar-sign"></i>
                 <div>Coupons</div>
+                <div class="menu_bar1">
+                    <ul>
+                        <li>AD-10(applicable ony more then amout of 1000)-click here to get</li>
+                        
+                    </ul>
+                </div>
+                    </li>
+                </ul>
             </a>
-            <a href="">
-                <i class="fa-solid fa-user"></i>
+            
+            <div class="reward2">
+            <ul>
+                    <li>
+                        <i class="fa-solid fa-user"></i>
                 <div>My Account</div>
-            </a>
+                <div class="menu_bar2">
+                    <a href="profile.html">
+                        <ul>
+                            <li>Profile</li>
+                            
+                        </ul>
+                        
+                    </a>
+                </div>
+                    </li>
+                </ul>
+            </div>
             <div class="vl"></div>
             <a href="./bag.html">
                 <span>0</span>
@@ -45,43 +78,43 @@
             <div class="items">
                 <ul>
                     <li>
-                        <a href="">Gift</a>
+                        <a href="./product1.html">Gift</a>
                     </li>
                     <li>
-                        <a href="">Women</a>
+                        <a href="./product2.html">Women</a>
                     </li>
                     <li>
-                        <a href="">Men</a>
+                        <a href="./product3.html">Men</a>
                     </li>
                     <li>
-                        <a href="">Kids</a>
+                        <a href="./product4.html">Kids</a>
                     </li>
                     <li>
-                        <a href="">Shoes</a>
+                        <a href="./product5.html">Shoes</a>
                     </li>
                     <li>
-                        <a href="">Handbags</a>
+                        <a href="./product6.html">Handbags</a>
                     </li>
                     <li>
-                        <a href="">Jewelry</a>
+                        <a href="./product7.html">Jewelry</a>
                     </li>
                     <li>
-                        <a href="">Beauty</a>
+                        <a href="./product8.html">Beauty</a>
                     </li>
                     <li>
-                        <a href="">Home</a>
+                        <a href="./products.html">Home</a>
                     </li>
                     <li>
-                        <a href="">Bed&Bath</a>
+                        <a href="./product9.html">Bed&Bath</a>
                     </li>
                     <li>
-                        <a href="">Conn'sxAD</a>
+                        <a href="./eloproduct.html">Conn'sxAD</a>
                     </li>
                     <li>
-                        <a href="">Brands</a>
+                        <a href="./product10.html">Brands</a>
                     </li>
                     <li>
-                        <a href="">Clearance</a>
+                        <a href="./product10.html">Clearance</a>
                     </li>
                 </ul>
             </div>
@@ -97,13 +130,34 @@
     </header>
 <body>
     <div id="container">
+        
         <div class="cards"></div>
+        <br>
+        <form action="" id="coupan">
+            <input type="text" placeholder="Apply coupan" id="coupandata">
+            <input type="submit" value="Apply">
+            <P id="displaycoupan"></P>
+        </form>
+        <br>
+        <h1>amount</sub>:- <span id="total">0</span></h1>
+        <h1>total <span class="gst">(with GST)</span> :- <span id="gst">0</span></h1><sub> 
+            
     </div>
     
 </body>
 <script>
+    let body1 = document.querySelector("#container")
     let countcart = document.querySelector("span")
     let body = document.querySelector(".cards")
+    let spancount = document.querySelector(".spancount")
+    let lowbtn = document.querySelector(".spancount")
+    let highbtn = document.querySelector(".spancount")
+    let total1 = document.querySelector("#total")
+    let gst = document.querySelector("#gst")
+    let coupan = document.getElementById("coupan")
+    let coupandata = document.getElementById("coupandata")
+    let displaycoupan = document.getElementById("displaycoupan")
+
 
 
     let cartarr = JSON.parse(localStorage.getItem("cart"))
@@ -111,11 +165,46 @@ if(cartarr===null){
     cartarr = []
 }
 countcart.innerText = cartarr.length
-console.log(cartarr)
+
+
+
+grandtotal(cartarr)
+function grandtotal(data){
+    let total=0
+    data.forEach((element,index)=>{
+        if(cartarr.length==0){
+            total1.innerHTML = 0
+        gst.innerHTML = 0
+        }else{
+        total += Number(element.price)
+        total1.innerHTML = total
+        gst.innerHTML = (total + (element.price*0.18)).toFixed(2)
+        }
+    })
+    coupan.addEventListener("submit",(e)=>{
+        e.preventDefault()
+            if(total>=1000 && coupandata.value== "AD-10"){
+                displaycoupan.innerHTML = "Coupan Applied"
+                displaycoupan.style.color = "green"
+                total1.innerHTML = total-(total*0.1)
+                gst.innerHTML = ((total-(total*0.1)) + ((total-(total*0.1))*0.18)).toFixed(2)
+        }else if(coupandata.value!== "AD-10"){
+            coupandata.value = ""
+            displaycoupan.innerHTML = "Check coupan"
+                displaycoupan.style.color = "red"
+        }else{
+            coupandata.value = ""
+            displaycoupan.innerHTML = "Add more items"
+                displaycoupan.style.color = "red"
+        }
+        })
+    
+}
 Display(cartarr)
 function Display(data){
     body.innerHTML = ""
     data.forEach((element,index)=>{
+        let i=0;
         let card = document.createElement("div")
         card.setAttribute("class","card")
 
@@ -149,8 +238,19 @@ function Display(data){
             })
             localStorage.setItem("cart",JSON.stringify(cartarr))
             Display(cartarr)
+            
+            if(cartarr.length==0){
+            total1.innerHTML = 0
+        gst.innerHTML = 0
+        }else{
+            grandtotal(cartarr)
+        }
                 countcart.innerText = cartarr.length
+                
         })
+
+        let subtotal = document.createElement("p")
+        subtotal.innerText = "0"
 
 
         card.append(img, name, category, description, price, btn)
