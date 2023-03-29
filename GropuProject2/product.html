@@ -19,55 +19,50 @@
     <main>
       <div id="filter">
         <div id="brand-filter">
-          <h2>Filter By Arrivel</h2>
+          <h2>Filter By Category</h2>
           <hr>
           <div>
-            <p><input type="checkbox" id="Health" />Health</p>
-            
+            <input type="checkbox" id="All Products"/>
+            <label for="All Products">All Products</label>
           </div>
+          <br>
           <div>
-            <p><input type="checkbox" id="Jewelery" />Jewelery</p>
-            
+            <input type="checkbox" id="Mens" class="check" value="mens"/>
+            <label for="Mens">Men</label>
           </div>
+          <br>
           <div>
-            <p><input type="checkbox" id="Shoes" />Shoes</p>
-            
+            <input type="checkbox" id="Womens" class="check" value="women"/>
+            <label for="Womens">Womens</label>
           </div>
+          <br>
           <div>
-            <p><input type="checkbox" id="Computers" />Computers</p>
-            
+            <input type="checkbox" id="Kids" class="check" value="kids"/>
+            <label for="Kids">Kids</label>
           </div>
+          <br>
           <div>
-            <p><input type="checkbox" id="Tools" />Tools</p>
-            
+            <input type="checkbox" id="Gifts" class="check" value="gifts"/>
+            <label for="Gifts">Gifts</label>
           </div>
+          <br>
           <div>
-            <p><input type="checkbox" id="Industrial" />Industrial</p>
-            
+            <input type="checkbox" id="Bags" class="check" value="bags"/>
+            <label for="Bags">Bags</label>
           </div>
+          <br>
           <div>
-            <p><input type="checkbox" id="Sports" />Sports</p>
-            
+            <input type="checkbox" id="Homedecores" class="check" value="homedecore"/>
+            <label for="Homedecores">Homedecores</label>
           </div>
-          <div>
-            <p><input type="checkbox" id="Toys" />Toys</p>
-            
-          </div>
-          <div>
-            <p><input type="checkbox" id="Electronics" />Electronics</p>
-            
-          </div>
-          <div>
-            <p><input type="checkbox" id="Clothing" />Clothing</p>
-            
-          </div>
+         
         </div>
         <div id="category-filter">
           <h2>Filter By Price</h2>
           <hr>
           <div class="pricetag">
             <h3>Price</h3>
-            <h3>Clear</h3>
+            <h3 class="clear">Clear</h3>
           </div>
           <div class="main">
             <input type="range" min="0" max="100" value="50" id="priceslider">
@@ -83,6 +78,45 @@
         <div id="b-filter">
           <h2>Filter By Brand Name</h2>
           <hr>
+          <div>
+            <input type="checkbox" id="Nike" />
+            <label for="Nike">Nike</label>
+          </div>
+          <br>
+          <div>
+            <input type="checkbox" id="Adidas" />
+            <label for="Adidas">Adidas</label>
+          </div>
+          <br>
+          <div>
+            <input type="checkbox" id="Louis Vuitton" />
+            <label for="Louis Vuitton">Louis Vuitton</label>
+          </div>
+          <br>
+          <div>
+            <input type="checkbox" id="Cartier" />
+            <label for="Cartier">Cartier</label>
+          </div>
+          <br>
+          <div>
+            <input type="checkbox" id="Zara" />
+            <label for="Zara">Zara</label>
+          </div>
+        </div>
+
+        <div id="a-filter">
+          <h2>Filter By Arrival</h2>
+          <hr>
+          <div>
+            <input type="checkbox" id="New!" />
+            <label for="New!">New!...</label>
+          </div>
+          <br>
+          <div>
+            <input type="checkbox" id="Old!" />
+            <label for="Old!">Old!...</label>
+          </div>
+          
         </div>
 
       </div>
@@ -92,6 +126,7 @@
         </div>
       </div>
     </main>
+    <div id="pagination"></div>
   </body>
   <script type="module" src="product.js">
 
