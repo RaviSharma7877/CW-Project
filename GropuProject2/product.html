@@ -5,59 +5,150 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Product Page</title>
-    
+    <script src="https://kit.fontawesome.com/3f1f07c7b2.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <div class="nav">
-      <h1>Blueberry</h1>
-      <a href="./index.html">Home</a>
-      <a href="./cart.html">Cart</a>
-    </div>
-    <h1 id="alert"></h1>
     <main>
-      <div id="filter">
-        <div id="brand-filter">
-          <h2>Filter By Category</h2>
-          <hr>
-          <div>
-            <input type="checkbox" id="All Products"/>
-            <label for="All Products">All Products</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Mens" class="check" value="mens"/>
-            <label for="Mens">Men</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Womens" class="check" value="women"/>
-            <label for="Womens">Womens</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Kids" class="check" value="kids"/>
-            <label for="Kids">Kids</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Gifts" class="check" value="gifts"/>
-            <label for="Gifts">Gifts</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Bags" class="check" value="bags"/>
-            <label for="Bags">Bags</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Homedecores" class="check" value="homedecore"/>
-            <label for="Homedecores">Homedecores</label>
-          </div>
-         
+    <div class="nav">
+      <h1><span class="material-symbols-outlined">
+        storefront
+        </span>Blueberry</h1>
+    </div>
+    
+    <div class="inputcontainer">
+      <div class="search-box">
+        <form action="" id="form">
+          <button type="submit"><i class="fas fa-microphone"></i></button>
+          <input type="text" placeholder="Search product" id="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+
+
+    <br>
+    <div class="categoryfilter">
+      <h2>Filter By Category</h2>
+      <hr>
+      <div id="allproducts">
+        <div>
+          <img src="allproducts.png" alt="" srcset="" style="background-color: transparent;" width="30px"> All P.
         </div>
-        <div id="category-filter">
+      </div>
+      <div id="mens">
+        <div>
+          <span class="material-symbols-outlined">
+            person
+            </span> Men
+        </div>
+      </div>
+      <div id="womens">
+        <div>
+          <span class="material-symbols-outlined">
+            woman
+            </span> Womens
+        </div>
+      </div>
+      <div id="kids">
+        <div>
+          <span class="material-symbols-outlined">
+            child_care
+            </span> Kids
+        </div>
+      </div>
+      <div id="bags">
+        <div>
+          <span class="material-symbols-outlined">
+            backpack
+            </span> Bags
+        </div>
+      </div>
+      <div id="decore">
+        <div>
+          <span class="material-symbols-outlined">
+            house
+            </span> Decores
+        </div>
+      </div>
+      <div id="gifts">
+        <div>
+          <span class="material-symbols-outlined">
+            redeem
+            </span> Gifts
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <div class="Brandfilter">
+      <h2>Filter By Brand Name</h2>
+      <hr>
+      <div id="nike">
+        <div>
+          <img src="nike.png" alt="" srcset="" style="background-color: transparent;" width="30px"> Nike
+        </div>
+      </div>
+      <div id="Adidas">
+        <div>
+          <img src="adidas.png" alt="" srcset="" style="background-color: transparent;" width="25px"> Adidas
+        </div>
+      </div>
+      <div id="Louis">
+        <div>
+          <img src="louis.png" alt="" srcset="" style="background-color: transparent;" width="20px">Louis V.
+        </div>
+      </div>
+      <div id="Cartier">
+        <div>
+          <img src="cartier.png" alt="" srcset="" style="background-color: transparent;" width="25px"> Cartier
+        </div>
+      </div>
+      <div id="Zara">
+        <div>
+          <img src="zara.png" alt="" srcset="" style="background-color: transparent;" width="45px"> Zara
+        </div>
+      </div>
+      
+    </div>
+
+
+
+
+    <br>
+    <div class="Clothingfilter">
+      <h2>Filter By Clothing & Bags</h2>
+      <hr>
+      <div id="topsfilter">
+        <div>
+          <img src="tshirt.png" alt="" srcset="" style="background-color: transparent; color: white;" width="30px" > Tops
+        </div>
+      </div>
+      <div id="jeanfilter">
+        <div>
+          <img src="jeans.png" alt="" srcset="" style="background-color: transparent;" width="25px"> Jeans
+        </div>
+      </div>
+      <div>
+        <div id="bagpacks">
+          <img src="bagpack.png" alt="" srcset="" style="background-color: transparent;" width="25px">Bags
+        </div>
+      </div>
+      
+
+    </div>
+
+
+
+
+
+
+    <br>
+    <div id="category-filter">
           <h2>Filter By Price</h2>
           <hr>
           <div class="pricetag">
@@ -74,59 +165,17 @@
               </form>
             </div>
           </div>
-        </div>
-        <div id="b-filter">
-          <h2>Filter By Brand Name</h2>
-          <hr>
-          <div>
-            <input type="checkbox" id="Nike" />
-            <label for="Nike">Nike</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Adidas" />
-            <label for="Adidas">Adidas</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Louis Vuitton" />
-            <label for="Louis Vuitton">Louis Vuitton</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Cartier" />
-            <label for="Cartier">Cartier</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Zara" />
-            <label for="Zara">Zara</label>
-          </div>
-        </div>
-
-        <div id="a-filter">
-          <h2>Filter By Arrival</h2>
-          <hr>
-          <div>
-            <input type="checkbox" id="New!" />
-            <label for="New!">New!...</label>
-          </div>
-          <br>
-          <div>
-            <input type="checkbox" id="Old!" />
-            <label for="Old!">Old!...</label>
-          </div>
-          
-        </div>
-
-      </div>
-      <div id="product-container">
-        <div>
-          <!-- Here Append All the Products  -->
-        </div>
-      </div>
+    </div>
     </main>
-    <div id="pagination"></div>
+    <div class="datacontainer">
+        
+        <div id="product-container">
+        
+          <!-- Here Append All the Products  -->
+        
+      </div>
+    </div>
+    
   </body>
   <script type="module" src="product.js">
 
